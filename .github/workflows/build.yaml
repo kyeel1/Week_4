@@ -1,0 +1,11 @@
+jobs:
+  build:
+    image: ubuntu-20.04 
+    steps: 
+      - uses: actions/checkout
+      - run: dotnet build
+      
+  test:
+  analyze:
+  package:
+  deploy:
