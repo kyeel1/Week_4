@@ -5,11 +5,14 @@ jobs:
       - uses: actions/checkout
       - run: dotnet build
 
-  test:
-  analyze:
-  package:
-  deploy:
+  #test:
+  #analyze:
+  #package:
+  #deploy:
+
+name: build
 
 on:
   push:
-    - master
+    branches:
+      - master
