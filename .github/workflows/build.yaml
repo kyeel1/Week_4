@@ -4,8 +4,12 @@ jobs:
     steps: 
       - uses: actions/checkout
       - run: dotnet build
-      
+
   test:
   analyze:
   package:
   deploy:
+
+on:
+  push:
+    - master
