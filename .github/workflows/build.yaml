@@ -19,7 +19,7 @@ jobs:
       - run: |
           dotnet sonarscanner begin -o:'kyeel1' -k:'kyeel1_Week_4' -d:sonar.login='333f7ec8f3b1a068b4bb53c4b8f37be69c63a91b' -d:sonar.host.url='https://sonarcloud.io/'
           dotnet build
-          dotnet test -p:CollectCoverage=true -p:CollectCoverage=true --logger trx
+          dotnet test -p:CollectCoverage=true -p:CoverletOutputFormat=opencover --logger trx
           dotnet sonarscanner end -d:sonar.login='333f7ec8f3b1a068b4bb53c4b8f37be69c63a91b'
         env: 
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
